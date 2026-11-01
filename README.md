@@ -68,7 +68,7 @@ YottaFlexAI/
 └── .gitignore
 ```
 
-*The structure above is a guide to the main project files. Keep the actual filenames and folders in your repository consistent with your implementation.*
+*Note: This structure is illustrative. Keep the filenames and folders consistent with your actual project.*
 
 ## 5. Getting Started
 
@@ -80,14 +80,14 @@ Install the following before running the project:
 - Node.js and npm
 - Git
 
-### Step 1: Clone the repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/yottaflex-customer-journey-intelligence.git
 cd yottaflex-customer-journey-intelligence
 ```
 
-### Step 2: Set up the backend
+### Step 2: Set Up the Backend
 
 Open a terminal in the project root:
 
@@ -131,15 +131,11 @@ Start the FastAPI server:
 uvicorn app.main:app --reload
 ```
 
-Backend URL:
+Backend URL: http://127.0.0.1:8000
 
-`http://127.0.0.1:8000`
+API documentation: http://127.0.0.1:8000/docs
 
-API documentation:
-
-`http://127.0.0.1:8000/docs`
-
-### Step 3: Set up the frontend
+### Step 3: Set Up the Frontend
 
 Open another terminal:
 
@@ -159,83 +155,10 @@ Start the development server:
 npm run dev
 ```
 
-Frontend URL:
-
-`http://localhost:5173`
+Frontend URL: http://localhost:5173
 
 Keep both backend and frontend servers running while using the dashboard.
 
 ## 6. API Endpoints
 
-| Endpoint | Description |
-|---|---|
-| `GET /` | Backend health or root response |
-| `GET /api/summary` | Customer journey summary and KPI metrics |
-| `GET /api/funnel` | Customer conversion funnel |
-| `GET /api/channels` | Session distribution by channel |
-| `GET /api/anomalies` | Detected anomalies and data-quality indicators |
-| `GET /api/events` | Recent customer events |
-| `GET /api/journey-flow` | Customer journey flow and drop-off data |
-
-Interactive API documentation is available at `/docs`.
-
-## 7. Data Generation and Validation
-
-The project uses synthetic customer journey data rather than real customer information.
-
-The data-generation process uses a fixed random seed to support reproducibility. The generated datasets cover customer profiles, sessions, journey events, products, carts, orders, support tickets, experiments, and journey outcomes.
-
-The validation script checks important data-integrity conditions, including database relationships, consent-related identity checks, timestamp ordering, and dataset availability.
-
-A separate ground-truth dataset is maintained for evaluation.
-
-## 8. Dashboard Modules
-
-1. **Overview:** Customer, session, event, order, bot-session, and conversion metrics.
-2. **Customer Journey Flow:** Visual representation of journey stages and drop-offs.
-3. **Conversion Funnel:** Analysis of progression through purchase stages.
-4. **Channel Distribution:** Comparison of sessions across channels.
-5. **Friction and Anomaly Detection:** Visibility into detected data-quality exceptions.
-6. **Data Quality Overview:** Monitoring of delayed events, duplicate events, and identity gaps.
-7. **Recent Customer Events:** Inspection of recent event records.
-
-## 9. Screenshots
-
-Add screenshots of your completed dashboard here.
-
-For example:
-
-```markdown
-![Customer Journey Dashboard](docs/dashboard.png)
-```
-
-You can add more screenshots for the journey flow, funnel, and anomaly sections.
-
-## 10. Current Dataset Note
-
-The included datasets are synthetic and intended for development, demonstration, and evaluation. Results and metrics describe the generated dataset and should not be interpreted as real-world business performance.
-
-## 11. Future Enhancements
-
-- Advanced cross-channel identity resolution.
-- Customer-level journey timelines.
-- Experiment performance analysis.
-- More detailed drop-off investigation.
-- Additional anomaly detection and monitoring.
-- Production database and deployment integration.
-
-## 12. AI Assistance Disclosure
-
-AI assistance was used during development for guidance, debugging, code review, and documentation support. The project was implemented, tested, and reviewed as part of the recruitment assignment.
-
-## 13. Author
-
-**Ayyagari Sri Meghana Supriya**
-
-GitHub: https://github.com/Srimeghana30
-
----
-
-**Project:** Customer Journey Intelligence Platform  
-**Organisation:** YottaFlex AI  
-**Purpose:** Recruitment Project
+| Endpoint
